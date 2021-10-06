@@ -3,60 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/about/</loc>
+    <loc>http://www.sysadblog.com/about/</loc>
     <lastmod>2021-10-05T09:14:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/about/aboutme/</loc>
+    <loc>http://www.sysadblog.com/about/aboutme/</loc>
     <lastmod>2021-10-05T09:14:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>http://www.sysadblog.com/</loc>
     <lastmod>2021-10-05T09:14:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/posts/my-2-post/</loc>
+    <loc>http://www.sysadblog.com/authors/</loc>
     <lastmod>2021-10-05T09:03:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>http://www.sysadblog.com/posts/my-2-post/</loc>
     <lastmod>2021-10-05T09:03:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>http://www.sysadblog.com/authors/daniel-parrales/</loc>
+    <lastmod>2021-10-05T09:03:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.sysadblog.com/posts/</loc>
+    <lastmod>2021-10-05T09:03:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.sysadblog.com/posts/prueba/</loc>
     <lastmod>2021-09-30T09:16:53+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/authors/daniel-parrales/</loc>
-    <lastmod>2021-09-30T09:16:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/posts/prueba/</loc>
-    <lastmod>2021-09-30T09:16:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/posts/prueba3/</loc>
+    <loc>http://www.sysadblog.com/posts/prueba3/</loc>
     <lastmod>2021-09-29T14:34:11+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>http://www.sysadblog.com/categories/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>http://www.sysadblog.com/series/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>http://www.sysadblog.com/tags/</loc>
   </url>
   
 </urlset>

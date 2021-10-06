@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Sysadblog</title>
-    <link>http://www.example.com/authors/</link>
+    <link>http://www.sysadblog.com/authors/</link>
     <description>Recent content in Authors on Sysadblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Sep 2021 09:16:53 +0200</lastBuildDate><atom:link href="http://www.example.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 09:03:08 +0200</lastBuildDate><atom:link href="http://www.sysadblog.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Daniel Parrales</title>
-      <link>http://www.example.com/authors/daniel-parrales/</link>
-      <pubDate>Thu, 30 Sep 2021 09:16:53 +0200</pubDate>
+      <link>http://www.sysadblog.com/authors/daniel-parrales/</link>
+      <pubDate>Tue, 05 Oct 2021 09:03:08 +0200</pubDate>
       
-      <guid>http://www.example.com/authors/daniel-parrales/</guid>
+      <guid>http://www.sysadblog.com/authors/daniel-parrales/</guid>
       <description></description>
     </item>
     
