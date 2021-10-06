@@ -23,4 +23,4 @@ sudo apt-get install hugo
 
 ## h
 
-!images/configuracion.png!
+![Example image](images/configuracion.png)
