@@ -23,4 +23,4 @@ sudo apt-get install hugo
 
 ## h
 
-<img src="images/configuracion.png" width="48" height="48"/>
+{{- $image := resources.Get "images/configuracion.png" -}}
