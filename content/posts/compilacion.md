@@ -1,7 +1,7 @@
 +++ 
 draft = true
 date = 2021-10-07T18:03:08+02:00
-title = "Aún aquí?"
+title = "Compilación de un paquete escrito en C"
 description = "Compilación de un paquete escrito en C"
 slug = ""
 authors = ["Daniel Parrales"]
