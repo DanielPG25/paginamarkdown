@@ -69,4 +69,4 @@ customJS = []
 [[menu.main]]
   name = "About"
   weight = 2
-  url = "about/aboutme"
+  url = "aboutme"
