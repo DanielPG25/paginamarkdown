@@ -27,7 +27,7 @@ Lo primero que querremos cambiar será nuestro tema. En la página oficial de [H
 
 `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
 
-A continuación, si seguimos la documentación de la página, encontraremos que hay que modificar nuestro "config.toml", y para ello nos ponen uno de ejemplo que podremos copiar y modficar:
+A continuación, si seguimos la documentación de la página, encontraremos que hay que modificar nuestro "config.toml", y para ello nos ponen uno de ejemplo que podremos copiar y modificar:
 
 ```
 baseurl = "http://www.example.com"
