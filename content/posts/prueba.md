@@ -20,6 +20,6 @@ Hugo es un generador de páginas estáticas rápido y moderno escrito en Go. Uti
 
 `sudo apt-get install hugo`
 
-## hl
+## hlc
 
 ![configuracion.png](/images/configuracion.png)
