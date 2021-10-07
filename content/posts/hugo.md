@@ -23,11 +23,11 @@ Hugo es un generador de páginas estáticas rápido y moderno escrito en Go. Uti
 
 El archivo de configuración de hugo se llama "config.toml" y en el podemos cambiar varias cosas para modificar nuestra web a nuestro gusto.
 
-Lo primero que querremos cambiar será nuestro tema. En la página oficial de [Hugo](https://gohugo.io/) podemos encontrar bastantes temas de los que elegir. En mi caso, elegí **Coder**. Cada tema se instala de forma diferente, pero solo hay que seguir la guía que existe en la página oficial del tema. En mi caso, lo primero fue añadir el submódulo con el tema en mi directorio principal de la página:
+Lo primero que querremos cambiar será nuestro tema. En la página oficial de [Hugo](https://gohugo.io/) podemos encontrar bastantes temas de los que elegir. En mi caso, elegí **Coder**. Cada tema se instala de forma diferente, pero solo hay que seguir la guía que existe en la página oficial del tema. En este caso, lo primero fue añadir el submódulo con el tema en mi directorio principal de la página:
 
 `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
 
-A continuación, si seguimos la documentación de la página, encontraremos que hay que modificar nuestro "config.toml", y para ello nos ponen uno de ejemplo que podremos copiar y modfificar:
+A continuación, si seguimos la documentación de la página, encontraremos que hay que modificar nuestro "config.toml", y para ello nos ponen uno de ejemplo que podremos copiar y modficar:
 
 ```
 baseurl = "http://www.example.com"
@@ -104,7 +104,7 @@ disqusShortname = "yourdiscussshortname"
   url = "about/"
 ```
 
-Como se puede ver en la siguiente imagen, he modificado las línes referentes a la url base, el título y el tema. También he añadido alguna información personal sobre mí y he cambiado el avatar.
+Como se puede ver en la siguiente imagen, he modificado las líneas referentes a la url base, el título y el tema. También he añadido alguna información personal sobre mí y he cambiado el avatar.
 
 ![configuracion.png](/images/configuracion.png)
 
@@ -130,11 +130,11 @@ Con este comando, hugo nos crea un nuevo fichero *markdown* dentro de **content/
 
 Ahora ya solo queda publicar nuestra web estática en Internet, para lo cual hay muchos servicios de hosting disponibles. En mi caso elegí **Render**.
 
-**Render** es gratuito para las páginas estáticas, ofrece un gran mantenimiento y permite un despliegue rápido y autómatico desde un repositorio de *Github*. El proceso de despliegue es sencillo:
+**Render** es gratuito para las páginas estáticas, ofrece un gran mantenimiento y permite un despliegue rápido y automático desde un repositorio de *Github*. El proceso de despliegue es sencillo:
 
 * En primer lugar debemos tener nuestro esquema de directorios creados por hugo subido en *Github*.
-* A continuación nos creamos una cuenta en _Render_, y le damos permiso para acceder al repositorio de la paǵina en _Github_.
-* Seleccionamos el nombre que tendrá nuestra web y la rama del repositorio que queremos deplegar.
+* A continuación nos creamos una cuenta en _Render_, y le damos permiso para acceder al repositorio de la página en _Github_.
+* Seleccionamos el nombre que tendrá nuestra web y la rama del repositorio que queremos desplegar.
 * Cuando nos aparezca "Build Command" lo rellenamos con lo siguiente:
 
 `hugo -D`
