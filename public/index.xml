@@ -6,13 +6,13 @@
     <description>Recent content on Sysadblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Oct 2021 09:14:16 +0200</lastBuildDate><atom:link href="http://www.sysadblog.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 09:03:08 +0200</lastBuildDate><atom:link href="http://www.sysadblog.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sobre mí</title>
-      <link>http://www.sysadblog.com/about/aboutme/</link>
+      <link>http://www.sysadblog.com/aboutme/</link>
       <pubDate>Tue, 05 Oct 2021 09:14:16 +0200</pubDate>
       
-      <guid>http://www.sysadblog.com/about/aboutme/</guid>
+      <guid>http://www.sysadblog.com/aboutme/</guid>
       <description> Estudiante de Administración de Sistemas Informáticos en Red en el I.E.S Gonzalo Nazareno Nivel avanzado de inglés Nivel medio de japonés  </description>
     </item>
     
@@ -32,7 +32,8 @@
       
       <guid>http://www.sysadblog.com/posts/prueba/</guid>
       <description>Generador de páginas estáticas: Hugo    Sobre Hugo    Hugo es un generador de páginas estáticas rápido y moderno escrito en Go. Utiliza las librerías de Go html/template y text/template como base para las plantillas que utiliza. Instalarlo en Debian es de lo más sencillo, solo hay que usar el siguiente comando:
-h    </description>
+sudo apt-get install hugo
+hl    </description>
     </item>
     
     <item>

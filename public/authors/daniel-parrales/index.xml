@@ -23,7 +23,8 @@
       
       <guid>http://www.sysadblog.com/posts/prueba/</guid>
       <description>Generador de páginas estáticas: Hugo    Sobre Hugo    Hugo es un generador de páginas estáticas rápido y moderno escrito en Go. Utiliza las librerías de Go html/template y text/template como base para las plantillas que utiliza. Instalarlo en Debian es de lo más sencillo, solo hay que usar el siguiente comando:
-h    </description>
+sudo apt-get install hugo
+hl    </description>
     </item>
     
     <item>

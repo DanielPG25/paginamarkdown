@@ -3,17 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.sysadblog.com/about/</loc>
-    <lastmod>2021-10-05T09:14:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.sysadblog.com/about/aboutme/</loc>
-    <lastmod>2021-10-05T09:14:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.sysadblog.com/</loc>
+    <loc>http://www.sysadblog.com/aboutme/</loc>
     <lastmod>2021-10-05T09:14:16+02:00</lastmod>
   </url>
   
@@ -34,6 +24,11 @@
   
   <url>
     <loc>http://www.sysadblog.com/posts/</loc>
+    <lastmod>2021-10-05T09:03:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.sysadblog.com/</loc>
     <lastmod>2021-10-05T09:03:08+02:00</lastmod>
   </url>
   
