@@ -1,9 +1,9 @@
 +++ 
 draft = true
 date = 2021-10-11T19:32:07+02:00
-title = ""
+title = "Tomar el control de Metasploitable3"
 description = "Tomar el control de Metasploitable3"
-slug = "Tomar el control de Metasploitable3"
+slug = ""
 authors = ["Daniel Parrales"]
 tags = []
 categories = []
