@@ -1,3 +1,16 @@
++++ 
+draft = true
+date = 2021-10-11T16:26:50+02:00
+title = "Ejercicios para trabajar con el almacenamiento en libvirt"
+description = "Ejercicios para trabajar con el almacenamiento en libvirt"
+slug = ""
+authors = ["Daniel Parrales"]
+tags = []
+categories = []
+externalLink = ""
+series = []
++++
+
 # Ejercicios para trabajar con el almacenamiento en libvirt
 
 
