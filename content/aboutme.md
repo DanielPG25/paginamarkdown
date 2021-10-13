@@ -7,3 +7,4 @@ draft: true
 * Estudiante de Administración de Sistemas Informáticos en Red en el I.E.S Gonzalo Nazareno
 * Nivel avanzado de inglés
 * Nivel medio de japonés
+* asdfghj
