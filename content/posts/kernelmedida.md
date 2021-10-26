@@ -124,7 +124,7 @@ egrep '=m' .config | wc -l
 3721
 ```
 
-En total hay enlazados 2188 módulos de forma estática y 3721 de forma dinámica, lo que nos da un total de 5909 módulos. Como hay cerca de 6000 módulos, sería una tarea demasiado larga y tediosa el revisarlos todos uno por uno, por lo que haremos uso del comando `make localmodconfig`, que comprobará cuales de los módulos están siendo utilizados en este momento por el sistema y modificará el fichero *.config* en concordancia, descartando los que no estén siendo usados ya no se consideran imprescindibles:
+En total hay enlazados 2188 módulos de forma estática y 3721 de forma dinámica, lo que nos da un total de 5909 módulos. Como hay cerca de 6000 módulos, sería una tarea demasiado larga y tediosa el revisarlos todos uno por uno, por lo que haremos uso del comando `make localyesconfig`, que comprobará cuales de los módulos están siendo utilizados en este momento por el sistema y modificará el fichero *.config* en concordancia, descartando los que no estén siendo usados ya no se consideran imprescindibles, y añadiendo los dinámicos al grupo de los estáticos. (No he usado el comando `make localmodconfig` debido a que caba problemas en mi máquina)
 
 ```
 make localyesconfig
@@ -230,7 +230,7 @@ egrep '=m' .config | wc -l
 4
 ```
 
-El número se ha reducido considerablemente, desde casi 6000 a unos 1600 módulos. Ahora podremos realizar nuestra primera compilación, que no debería cambiar nada en nuestro sistema ya que los módulos son los que estamos usando actualmente, pero podremos comprobar que no ha ocurrido ningún problema y nuestro sistema arranca como es debido:
+El número se ha reducido considerablemente, desde casi 6000 a unos 1850 módulos. Ahora podremos realizar nuestra primera compilación, que no debería cambiar nada en nuestro sistema ya que los módulos son los que estamos usando actualmente, pero podremos comprobar que no ha ocurrido ningún problema y nuestro sistema arranca como es debido:
 
 ```
 make -j8 bindeb-pkg
