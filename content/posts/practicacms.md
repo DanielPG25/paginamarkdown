@@ -587,7 +587,7 @@ Acabado este paso, ya solo tenemos que cambiar el fichero de configuración de n
 Guardamos el archivo e intentamos acceder a la nueva ruta desde el navegador:
 
 
-![opencart_hosting_acceso.png](/images/practicacms/opencart_hosting.png)
+![opencart_hosting_acceso.png](/images/practicacms/opencart_hosting_acceso.png)
 
 
 Accedemos con las credenciales que usamos en la instalación de opencart, y si funciona la conexión con la base de datos, debería dejarnos entrar:
