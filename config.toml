@@ -1,4 +1,4 @@
-baseurl = "https://www.sysadblog.onrender.com"
+baseurl = "https://sysadblog.onrender.com"
 title = "Sysadblog"
 theme = "hugo-coder"
 languagecode = "en"
