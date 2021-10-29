@@ -6,7 +6,7 @@ description = "Mapear URL a ubicaciones de un sistema de ficheros con Apache2"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Servicios de Red"]
 externalLink = ""
 series = []
 +++

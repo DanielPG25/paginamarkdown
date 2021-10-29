@@ -6,7 +6,7 @@ description = "Compilación de un Kernel a medida"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Administración de Sistemas Operativos"]
 externalLink = ""
 series = []
 +++

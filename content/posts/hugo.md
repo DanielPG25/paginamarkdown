@@ -6,7 +6,7 @@ description = "Generador de Web Estática Hugo"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Aplicaciones Web"]
 externalLink = ""
 series = []
 +++

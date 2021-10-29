@@ -6,7 +6,7 @@ description = "Práctica de configuración de un servidor DHCP manualmente y con
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Servicios de Red"]
 externalLink = ""
 series = []
 +++

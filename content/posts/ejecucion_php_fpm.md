@@ -6,7 +6,7 @@ description = "Ejecución de PHP con PHP-FPM"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Aplicaciones Web"]
 externalLink = ""
 series = []
 +++

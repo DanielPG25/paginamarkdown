@@ -6,7 +6,7 @@ description = "Instalación de un servidor DHCP en Debian"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Servicios de Red"]
 externalLink = ""
 series = []
 +++

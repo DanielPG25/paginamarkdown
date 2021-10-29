@@ -6,7 +6,7 @@ description = "Ejercicios para trabajar con el almacenamiento en libvirt"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Cloud Computing"]
 externalLink = ""
 series = []
 +++

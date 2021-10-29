@@ -6,7 +6,7 @@ description = "Tomar el control de Metasploitable3"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Seguridad y Alta Disponibilidad"]
 externalLink = ""
 series = []
 +++

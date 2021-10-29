@@ -6,7 +6,7 @@ description = "Implantación de aplicaciones web PHP"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Aplicaciones Web"]
 externalLink = ""
 series = []
 +++

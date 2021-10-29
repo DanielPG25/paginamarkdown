@@ -6,7 +6,7 @@ description = "Modificación de un virtualhost con el fichero .htaccess"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Servicios de Red"]
 externalLink = ""
 series = []
 +++

@@ -6,7 +6,7 @@ description = "Instalación de BookMedik y acceso usando LAMP"
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Aplicaciones Web"]
 externalLink = ""
 series = []
 +++

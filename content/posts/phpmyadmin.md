@@ -6,7 +6,7 @@ description = "Vamos a instalar phpmyadmin desde los repositorios y vamos a acce
 slug = ""
 authors = ["Daniel Parrales"]
 tags = []
-categories = []
+categories = ["Aplicaciones Web"]
 externalLink = ""
 series = []
 +++
