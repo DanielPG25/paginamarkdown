@@ -70,3 +70,7 @@ customJS = []
   name = "About"
   weight = 2
   url = "aboutme"
+[[menu.main]]
+  name = "Categories"
+  weight = 3
+  url = "categories"
