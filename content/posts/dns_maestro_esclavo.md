@@ -47,13 +47,16 @@ options {
         allow-query { 192.168.121.0/24; };
         allow-transfer { none; };
 
+        auth-nxdomain no;    # conform to RFC1035
+        recursion no;
+
         dnssec-validation auto;
         listen-on-v6 { any; };
 
 };
 
 acl slaves {
-  192.168.121.35/24;           // parralesgarcia
+  192.168.121.35;           // parralesgarcia
 };
 ```
 
