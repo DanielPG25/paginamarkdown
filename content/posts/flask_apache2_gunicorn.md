@@ -61,7 +61,7 @@ Si accedemos al puerto 8080 de la máquina veremos la aplicación en funcionamie
 
 Con la opción `-w` indico el número de procesos que van a servir las peticiones, y con la opción `-b` indico la dirección y el puerto de escucha.
 
-Ahora procedamos a crear unidad systemd para poder controlar el proceso de gunicorn de forma más sencilla. Para ello creamos el fichero `gunicorn-guestbook.service` en el directorio `/etc/systemd/system/`:
+Ahora procedamos a crear una unidad systemd para poder controlar el proceso de gunicorn de forma más sencilla. Para ello creamos el fichero `gunicorn-guestbook.service` en el directorio `/etc/systemd/system/`:
 
 ```
 nano /etc/systemd/system/gunicorn-guestbook.service
