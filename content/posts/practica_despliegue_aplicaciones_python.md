@@ -178,6 +178,8 @@ Una vez hecho esto, podríamos ejecutar la aplicación simplemente con el siguie
 gunicorn django_tutorial.wsgi
 ```
 
+**Nota:** El comando anterior hace referencia al fichero `.wsgi` que está dentro del directorio `django_tutorial`. Gunicorn no entiende las rutas si usamos las barras `/`, por lo que usamos el punto para indicar la ruta `.`.
+
 Sin embargo, como queremos que la aplicación se este ejecutando continuamente para poder acceder a ella desde un virtualhost en nginx, vamos a crear una unidad systemd para poder controlar ese proceso de forma más sencilla:
 
 ```
