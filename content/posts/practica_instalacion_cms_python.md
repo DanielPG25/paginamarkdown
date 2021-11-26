@@ -243,7 +243,7 @@ Ahora creamos el virtualhost para la nueva aplicación:
 
 Como vemos, hemos creado un alias para el contenido estático. Esto se debe a que django no muestra el contenido estático en producción, es decir, si Debug es igual a False. Es por ello que para conseguir mostrar el contenido estático debemos crear un alias, y al proxy que indica el contenido estático, le añadimos el símbolo "!", que simboliza que no debe buscar ese contenido a través del proxy, sino en local.
 
-**Nota:**Si aún habiendo creado el proxy y la carpeta de forma correcta, el contenido estático sigue sin servirse, aseguraos de que el usuario que sirve la aplicación (por defecto el usuario apache en Rocky), tenga permisos para acceder a la carpeta de la aplicación y del contenido estático. 
+**Nota:** Si aún habiendo creado el proxy y la carpeta de forma correcta, el contenido estático sigue sin servirse, aseguraos de que el usuario que sirve la aplicación (por defecto el usuario apache en Rocky), tenga permisos para acceder a la carpeta de la aplicación y del contenido estático. 
 
 Como estamos en Rocky, debemos crear el enlace simbólico a mano:
 
