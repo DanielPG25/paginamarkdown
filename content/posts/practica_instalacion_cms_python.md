@@ -109,7 +109,7 @@ git clone https://github.com/DanielPG25/mezzaparr.git
 
 Ahora tenemos que modificar el fichero `settings.py` para adaptarlo al nuevo entorno:
 
-![settings_mezzanine.png](/images/practica_instalacion_cms_python/settings_mezzanine.png)
+![settings.png](/images/practica_instalacion_cms_python/settings.png)
 
 Una vez modificado el fichero, vamos a instalar todos los paquetes que vamos a necesitar en el entorno de producción:
 
