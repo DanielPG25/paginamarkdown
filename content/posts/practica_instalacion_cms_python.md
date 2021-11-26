@@ -55,7 +55,7 @@ Una vez hecho esto, vamos a intentar acceder a través de un navegador a la paǵ
 python manage.py runserver 0.0.0.0:8000
 ```
 
-[paginainicial_mezzanine.png](/images/practica_instalacion_cms_python/paginainicial_mezzanine.png)
+![paginainicial_mezzanine.png](/images/practica_instalacion_cms_python/paginainicial_mezzanine.png)
 
 Con esto hemos finalizado la instalación en el entorno de desarrollo.
 
@@ -69,19 +69,19 @@ python3 manage.py createsuperuser
 
 Una vez que lo hemos creado, podemos acceder a la zona de administración de nuestra aplicación:
 
-[administracion_mezzanine.png](/images/practica_instalacion_cms_python/administracion_mezzanine.png)
+![administracion_mezzanine.png](/images/practica_instalacion_cms_python/administracion_mezzanine.png)
 
 En esta página entramos con las credenciales que acabamos de crear:
 
-[admin_mezzanine.png](/images/practica_instalacion_cms_python/admin_mezzanine.png)
+![admin_mezzanine.png](/images/practica_instalacion_cms_python/admin_mezzanine.png)
 
 Una vez en la zona de administración, ya podemos cambiar la página a nuestro gusto. En mi caso, he creado la siguiente entrada de blog:
 
-[blog_mezzanine.png](/images/practica_instalacion_cms_python/blog_mezzanine.png)
+![blog_mezzanine.png](/images/practica_instalacion_cms_python/blog_mezzanine.png)
 
 Y he cambiado el título a la página:
 
-[nombre_mezzanine.png](/images/practica_instalacion_cms_python/nombre_mezzanine.png)
+![nombre_mezzanine.png](/images/practica_instalacion_cms_python/nombre_mezzanine.png)
 
 Con esto ya hemos personalizado lo suficiente la página en este apartado.
 
@@ -109,7 +109,7 @@ git clone https://github.com/DanielPG25/mezzaparr.git
 
 Ahora tenemos que modificar el fichero `settings.py` para adaptarlo al nuevo entorno:
 
-[settings_mezzanine.png](/images/practica_instalacion_cms_python/settings_mezzanine.png)
+![settings_mezzanine.png](/images/practica_instalacion_cms_python/settings_mezzanine.png)
 
 Una vez modificado el fichero, vamos a instalar todos los paquetes que vamos a necesitar en el entorno de producción:
 
@@ -260,10 +260,10 @@ systemctl reload httpd
 
 Ahora ya podemos acceder a nuestra página a través del navegador (tras añadir el correspondiente registro CNAME en nuestro servidor dns):
 
-[acceso_hera.png](/images/practica_instalacion_cms_python/acceso_hera.png)
+![acceso_hera.png](/images/practica_instalacion_cms_python/acceso_hera.png)
 
 Como vemos se nos sirve el contenido estático. Veamos ahora si el artículo que creamos anteriormente sigue ahí (lo que querría decir que la migración de los datos de la base datos fue correcta):
 
-[contenido_blog.png](/images/practica_instalacion_cms_python/contenido_blog.png)
+![contenido_blog.png](/images/practica_instalacion_cms_python/contenido_blog.png)
 
 Con esto podemos decir que la migración ha sido un éxito.
