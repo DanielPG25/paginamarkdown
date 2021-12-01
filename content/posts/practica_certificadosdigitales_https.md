@@ -55,14 +55,14 @@ Para exportar solamente la clave pública hay dos opciones:
 
 * Si usas Debian 11 (como en mi caso), debemos exportar el par de claves con la contraseña, y después usar la herramienta `openssl` para extraer la pública:
 
-    * Primero extraemos el par de claves del certificado:
+-Primero extraemos el par de claves del certificado:
 
 ```
 openssl pkcs12 -in DanielParralesCert.pfx -nocerts -nodes -out DanielParralesCert.key
 ```
-**
-    * Ahora ya podemos extraer la clave pública:
-**
+
+-Ahora ya podemos extraer la clave pública:
+
 ```
 openssl rsa -in DanielParralesCert.key -pubout -out DanielParralesPub.key
 ```
