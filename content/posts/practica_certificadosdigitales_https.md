@@ -57,15 +57,15 @@ Para exportar solamente la clave pública hay dos opciones:
 
     * Primero extraemos el par de claves del certificado:
 
-   	```
-   	openssl pkcs12 -in DanielParralesCert.pfx -nocerts -nodes -out DanielParralesCert.key
-   	```
-
+```
+openssl pkcs12 -in DanielParralesCert.pfx -nocerts -nodes -out DanielParralesCert.key
+```
+**
     * Ahora ya podemos extraer la clave pública:
-
-    ```
-    openssl rsa -in DanielParralesCert.key -pubout -out DanielParralesPub.key
-    ```
+**
+```
+openssl rsa -in DanielParralesCert.key -pubout -out DanielParralesPub.key
+```
 
 ### Tarea 2: Validación del certificado
 
