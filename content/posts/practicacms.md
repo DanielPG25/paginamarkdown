@@ -149,7 +149,7 @@ Ya podemos iniciar la configuración de mediawiki. Tras rellenar todos los campo
 ![finalizarmediawiki.png](/images/practicacms/finalizarmediawiki.png)
 
 
-Haciendo caso a lo que nos dice la página y copiamos el archivo que se ha descargado (*LocalSettings.php*) en el directorio donde se encontraba el *index.php* (*`www.dparrales-mediawiki.com/mediawiki-1.36.2/mw-config`*):
+Haciendo caso a lo que nos dice la página y copiamos el archivo que se ha descargado (*LocalSettings.php*) en el directorio donde se encontraba el *index.php* (*`www.dparrales-mediawiki.com/mediawiki-1.36.2`*):
 
 ```
 ls -l
