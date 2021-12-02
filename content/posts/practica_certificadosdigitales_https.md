@@ -27,7 +27,7 @@ Una vez que lo hemos obtenido, tras descargar el certificado, podemos instalarlo
 
 ![instalar_certificado1.png](/images/practica_certificadosdigitales_https/instalar_certificado1.png)
 
-* Seleccionamos el ceritificado, en mi caso en formato `.pfx`, e introducimos la contraseña para importarlo:
+* Seleccionamos el certificado, en mi caso en formato `.pfx`, e introducimos la contraseña para importarlo:
 
 ![cerificado_importado.png](/images/practica_certificadosdigitales_https/cerificado_importado.png)
 
@@ -137,7 +137,7 @@ Le damos a firmar, tras lo cual nos preguntará por el certificado que queremos 
 
 Con esto, ya hemos firmado ambos documentos, por lo que lo único que resta es mandárselo a un compañero y recibir los suyos firmados. En mi caso, mi compañera es Lara Pruna Ternero.
 
-#### Tu debes recibir otro documento firmado por un compañero y utilizando las herramientas anteriores debes visualizar la firma (Visualizar Firma) y (Verificar Firma). ¿Puedes verificar la firma aunque no tengas la clave pública de tu compañero?, ¿Es necesario estar conectado a internet para hacer la validación de la firma?. Razona tus respuestas.
+#### Tu debes recibir otro documento firmado por un compañero y utilizando las herramientas anteriores debes visualizar la firma (Visualizar Firma) y (Verificar Firma). ¿Puedes verificar la firma aunque no tengas la clave pública de tu compañero?, ¿Es necesario estar conectado a Internet para hacer la validación de la firma?. Razona tus respuestas.
 
 He recibido los siguientes dos documentos firmados por mi compañera usando los métodos mencionados anteriormente:
 
@@ -185,7 +185,7 @@ Para esta tarea vamos a consultar nuestros puntos del carnet a través de la pá
 
 ![dgt1.png](/images/practica_certificadosdigitales_https/dgt1.png)
 
-Una vez haya cargado la página, seleccionamos entrar con certificado eléctronico:
+Una vez haya cargado la página, seleccionamos entrar con certificado electrónico:
 
 ![dgt2.png](/images/practica_certificadosdigitales_https/dgt2.png)
 
@@ -205,7 +205,7 @@ Con esto hemos demostrado que podemos acceder a una página de la administració
 
 Esta práctica la vamos a realizar con un compañero. En un primer momento un alumno creará una Autoridad Certficadora y firmará un certificado para la página del otro alumno. Posteriormente se volverá a realizar la práctica con los roles cambiados.
 
-Para hacer esta práctica puedes buscar información en internet, algunos enlaces interesantes:
+Para hacer esta práctica puedes buscar información en Internet, algunos enlaces interesantes:
 
 * [Phil’s X509/SSL Guide](https://www.phildev.net/ssl/)
 * [How to setup your own CA with OpenSSL](https://gist.github.com/Soarez/9688998)
@@ -215,7 +215,7 @@ El alumno que hace de Autoridad Certificadora deberá entregar una documentació
 
 #### Crear su autoridad certificadora (generar el certificado digital de la CA). Mostrar el fichero de configuración de la AC.
 
-El primer paso para crear la autoridad certificadora será crear un directorio en el cual almacenaremos lo refente a la autoridad, para de esta forma tenerlo todo lo más organizado posible. Así pues, he creado el directorio padre (llamado CA) con los siguientes subdirectorios:
+El primer paso para crear la autoridad certificadora será crear un directorio en el cual almacenaremos lo referente a la autoridad, para de esta forma tenerlo todo lo más organizado posible. Así pues, he creado el directorio padre (llamado CA) con los siguientes subdirectorios:
 
 * certsdb: donde se almacenarán los certificados firmados.
 * certreqs: donde se almacenarán los ficheros de solicitud de firma (CSR).
@@ -401,7 +401,7 @@ En primer lugar debemos instalar un servidor apache. He instalado el servidor en
 sudo apt install apache2
 ```
 
-A continuación modificaremos el virtualhost para usar el nombre de la página web que nos han idicado, en mi caso, `dparrales.iesgn.org`:
+A continuación modificaremos el virtualhost para usar el nombre de la página web que nos han indicado, en mi caso, `dparrales.iesgn.org`:
 
 ```
 nano /etc/apache2/sites-available/000-default.conf
@@ -418,7 +418,7 @@ nano /etc/apache2/sites-available/000-default.conf
 </VirtualHost>
 ```
 
-Tras esto, reinciamos el servicio para cargar la configuración:
+Tras esto, reiniciamos el servicio para cargar la configuración:
 
 ```
 systemctl reload apache2
@@ -434,7 +434,7 @@ Si intentamos entrar ahora, nos muestra lo siguiente:
 
 ![pagina_estatica_http.png](/images/practica_certificadosdigitales_https/pagina_estatica_http.png)
 
-Con esto hemos terminado de configurar incialmente apache. Sin embargo, el acceso que tenemos ahora es por http, no por https, por lo que tendremos que corregirlo durante de realización de la tarea.
+Con esto hemos terminado de configurar inicialmente apache. Sin embargo, el acceso que tenemos ahora es por http, no por https, por lo que tendremos que corregirlo durante de realización de la tarea.
 
 Así pues, en primer lugar, vamos a crear una clave privada de 4096 bits que usaremos posteriormente para generar una firma de solicitud de certificado (CSR) y que ahora sirve para identificar al servidor. Para ello vamos a usar el comando 'openssl':
 
@@ -576,7 +576,7 @@ Ahora que hemos terminado de tocar la configuración de apache, podemos reinicia
 systemctl reload apache2
 ```
 
-Si ententamos entrar en la página ahora, obtenemos lo siguiente:
+Si intentamos entrar en la página ahora, obtenemos lo siguiente:
 
 ![pagina_https.png](/images/practica_certificadosdigitales_https/pagina_https.png)
 
