@@ -380,7 +380,7 @@ Para acceder, tenemos que usar el usuario que se crea por defecto en el esquema:
 
 ![acceso_guacadmin.png](/images/practica_despliegueCMS_Java/acceso_guacadmin.png)
 
-Desde dentro del perfil ya podríamos hacer lo que quisiéramos: crear conexiones, cambiar la contraseña, modificar los parátros de las conexiones existentes, etc. También, al ser administradores, podríamos crear usuarios, grupos, etc.
+Desde dentro del perfil ya podríamos hacer lo que queramos: crear conexiones, cambiar la contraseña, modificar los parámetros de las conexiones existentes, etc. También, al ser administradores, podríamos crear usuarios, grupos, etc.
 
 Para finalizar con la instalación y configuración de guacamole, intentaremos acceder a una de las máquinas que hemos definido en las conexiones:
 
