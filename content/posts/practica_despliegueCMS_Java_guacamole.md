@@ -33,7 +33,7 @@ apt install build-essential libcairo2-dev libjpeg62-turbo-dev libpng-dev libtool
 Ahora debemos descargarnos las fuentes de guacamole-server, para compilar el programa nosotros (es un requisito que nos indica en la página, aunque posteriormente descarguemos el fichero `.war` para instalar el cliente). Así pues, descargaremos la última versión que hay en la página oficial:
 
 ```
-wget https://apache.org/dyn/closer.lua/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz
+wget -O 'guacamole-client-1.3.0.tar.gz' https://apache.org/dyn/closer.lua/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz?action=download
 ```
 
 Y lo extraemos:
