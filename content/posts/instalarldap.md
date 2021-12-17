@@ -84,7 +84,7 @@ objectClass: organizationalUnit
 ou: Personas 
 
 dn: ou=Grupos,dc=dparrales,dc=gonzalonazareno,dc=org
-objectclass: organizationalUnit
+objectClass: organizationalUnit
 ou: Grupos
 ```
 
