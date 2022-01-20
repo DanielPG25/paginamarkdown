@@ -281,3 +281,43 @@ Ahora veamos si el `index.html` que muestra es el mismo que creamos en el otro c
 ![img_20.png](/images/introduccion_docker/img_20.png)
 
 Como vemos, a pesar de haber borrado el contenedor, la información se ha guardado al haberla guardado en el volumen.
+
+
+## Ejercicio 4: Redes
+
+### Despliegue de Nextcloud + Mariadb/PostgreSQL
+
+Vamos a desplegar la aplicación nextcloud con una base de datos (puedes elegir mariadb o PostgreSQL) (*NOTA: Para que no te de errores utiiliza la imagen `mariadb:10.5`*). Te puede servir el ejercicio que hemos realizado para desplegar [Wordpress](https://iesgn.github.io/curso_docker_2021/sesion4/wordpress.html). Para ello sigue los siguientes pasos:
+
+* Crea una red de tipo bridge.
+* Crea el contenedor de la base de datos conectado a la red que has creado. La base de datos se debe configurar para crear una base de dato y un usuario. Además el contenedor debe utilizar almacenamiento (volúmenes o bind mount) para guardar la información. Puedes seguir la documentación de [Mariadb](https://hub.docker.com/_/mariadb) o la de [PostgreSQL](https://hub.docker.com/_/postgres).
+* A continuación, siguiendo la documentación de la imagen [nextcloud](https://hub.docker.com/_/nextcloud), crea un contenedor conectado a la misma red, e indica las variables adecuadas para que se configure de forma adecuada y realice la conexión a la base de datos. El contenedor también debe ser persistente usando almacenamiento.
+* Accede a la aplicación usando un navegador web.
+
+-----------------------------------------------------------
+
+Empecemos creando la red:
+
+```
+docker network create red_nextcloud
+```
+
+Ahora crearemos el contenedor de la base de datos (usaremos mariadb y "bind mount" para guardar la información):
+
+```
+docker run -d --name bdmaria --network red_nextcloud -v /opt/mariadb_nextcloud:/var/lib/mysql -e MARIADB_ROOT_PASSWORD=root -e MARIADB_DATABASE=nextcloud -e MARIADB_USER=nextcloud -e MARIADB_PASSWORD=nextcloud mariadb:10.5
+```
+
+![img_22.png](/images/introduccion_docker/img_22.png)
+
+A continuación crearemos el contenedor con la aplicación nextcloud, al cual le indicaremos mediante variables de entorno, que la base de datos que debe usar es la que hemos creado en el otro contenedor:
+
+```
+docker run -d --name nextcloud --network red_nextcloud -v /opt/nextcloud:/var/www/html -p 8081:80 -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_PASSWORD=nextcloud -e MYSQL_HOST=bdmaria nextcloud
+```
+
+![img_23.png](/images/introduccion_docker/img_23.png)
+
+Con esto, si entramos en el navegador y nos vamos al puerto 8081 nos debería aparecer la página de inicio de nextcloud:
+
+![img_24.png](/images/introduccion_docker/img_24.png)
