@@ -321,3 +321,80 @@ docker run -d --name nextcloud --network red_nextcloud -v /opt/nextcloud:/var/ww
 Con esto, si entramos en el navegador y nos vamos al puerto 8081 nos debería aparecer la página de inicio de nextcloud:
 
 ![img_24.png](/images/introduccion_docker/img_24.png)
+
+## Ejercicio 5: Escenarios multicontenedor
+
+### Despliegue de prestashop
+
+Es esta tarea vamos a desplegar una tienda virtual construída con prestashop. Utilizaremos el fichero `docker-compose.yml` de Bitnami que podemos encontrar en la siguiente [URL](https://hub.docker.com/r/bitnami/prestashop).
+
+Una vez hemos descargado el fichero docker-compose.yml asociado deberemos modificarlo de la siguiente manera:
+
+Modificar los valores de las variables de entorno para conseguir lo siguiente:
+
+* El usuario de prestashop para conectarse a la base de datos deberá ser pepe y su contraseña pepe. Investigar en la página de Dockerhub cuál es el nombre de las variables de entorno que debo modificar y/o añadir.
+* Modificar el nombre de la base de datos de prestashop para que se llame mitienda. Debéis de modificar esos valores en los dos servicios. Investigar en la página de Dockerhub cuál es el nombre de las variables de entorno que debo modificar.
+* Ten en cuenta que si tienes instalado docker en una máquina virtual y tienes que poner la IP de la máquina para acceder a los contenedores, debes modificar la variable de entorno `PRESTASHOP_HOST` para poner esa dirección ip.
+* Por último, si tienes que repetir el ejercicio, borra el escenario con `docker-compose down -v`, para eliminar los volúmenes y que la modificación de la configuración se tenga en cuenta.
+
+----------------------------------------------------------------------------
+
+En primer lugar debemos instalarnos "docker-compose":
+
+```
+apt install docker-compose
+```
+
+A continuación nos descargamos el fichero `docker-compose.yml` tal y como se nos indica en la url proporcionada:
+
+```
+curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-prestashop/master/docker-compose.yml > docker-compose.yml
+```
+
+Modificamos los parámetros necesarios para que se adapte a lo que nos piden:
+
+```
+nano docker-compose.yml
+
+# En el servicio de mariadb:
+
+ALLOW_EMPTY_PASSWORD=no
+MARIADB_ROOT_PASSWORD=root
+MARIADB_USER=pepe
+MARIADB_PASSWORD=pepe
+MARIADB_DATABASE=mitienda
+
+# En el servicio de prestashop
+
+PRESTASHOP_HOST=localhost
+PRESTASHOP_DATABASE_HOST=mariadb
+PRESTASHOP_DATABASE_PORT_NUMBER=3306
+PRESTASHOP_DATABASE_USER=pepe
+PRESTASHOP_DATABASE_NAME=mitienda
+ALLOW_EMPTY_PASSWORD=no
+PRESTASHOP_DATABASE_PASSWORD=pepe
+```
+
+Tras estas modificaciones, el fichero queda de la siguiente forma:
+
+![img_25.png](/images/introduccion_docker/img_25.png)
+
+Ahora levantamos los contenedores con el siguiente comando:
+
+```
+docker-compose up -d
+```
+
+Tras descargar los ficheros necesarios, podemos comprobar que los contenedores están funcionando con el siguiente comando:
+
+```
+docker-compose ps
+```
+
+![img_26.png](/images/introduccion_docker/img_26.png)
+
+Nos indica que están funcionando, por lo que podemos acceder a nuestro navegador y ver si realmente se muestra la página principal de prestashop:
+
+![img_27.png](/images/introduccion_docker/img_27.png)
+
+Como se nos muestra la página principal, podemos decir que el ejercicio ha sido un éxito.
