@@ -398,3 +398,67 @@ Nos indica que están funcionando, por lo que podemos acceder a nuestro navegado
 ![img_27.png](/images/introduccion_docker/img_27.png)
 
 Como se nos muestra la página principal, podemos decir que el ejercicio ha sido un éxito.
+
+
+## Ejercicio 6: Creación de Imágenes
+
+### Creación de una imagen a partir de un Dockerfile
+
+* Crea una página web estática (por ejemplo busca una plantilla HTML5). O simplemente crea un `index.html`.
+* Crea un fichero `Dockerfile` que permita crear una imagen con un servidor web sirviendo la página. Puedes usar una imagen base debian o ubuntu, o una imagen que tenga ya un servicio web, como hemos visto en el apartado [Ejemplo 1: Construcción de imágenes con una página estática](https://iesgn.github.io/curso_docker_2021/sesion6/ejemplo1.html).
+* Ejecuta el comando docker que crea la nueva imagen. La imagen se debe llamar `<tu_usuario_docker_hub>/mi_servidor_web`.
+* Conéctate a Docker Hub y sube la imagen que acabas de crear.
+* Descarga la imagen en otro ordenador donde tengas docker instalado, y crea un contenedor a partir de ella. (Si no tienes otro ordenador con docker instalado, borra la imagen en tu ordenador y bájala de Docker Hub).
+
+------------------------------------------------
+
+Para realizar este ejercicio, vamos a utilizar como base la imagen de apache2, la cual tiene ya el servidor web instalado. El `Dockerfile` quedaría de la siguiente forma:
+
+```
+nano Dockerfile
+
+FROM httpd:2.4
+MAINTAINER Daniel Parrales García "daniparrales16@gmail.com"
+ADD html /usr/local/apache2/htdocs/
+EXPOSE 80
+```
+
+![img_28.png](/images/introduccion_docker/img_28.png)
+
+Como la imagen de apache tiene ya el proceso de apache ejecutándose, no es necesario añadirlo al fichero. Para crear la imagen ejecutamos el siguiente comando:
+
+```
+docker build -t dparrales/mi_servidor_web .
+```
+
+![img_29.png](/images/introduccion_docker/img_29.png)
+
+Una vez que ya tenemos creada la imagen, vamos a subirla a Docker Hub. Para ello ejecutamos `docker login` e introducimos nuestras credenciales:
+
+![img_30.png](/images/introduccion_docker/img_30.png)
+
+Ahora la subimos a Docker Hub usando el siguiente comando:
+
+```
+docker push dparrales/mi_servidor_web
+```
+
+![img_31.png](/images/introduccion_docker/img_31.png)
+
+Podemos ver que se ha subido en nuestra página de Docker Hub:
+
+![img_32.png](/images/introduccion_docker/img_32.png)
+
+Para ver como se descarga, podemos borrar la imagen que tenemos y crear un contenedor a partir de la que tenemos en Docker Hub:
+
+```
+docker image rm dparrales/mi_servidor_web:latest
+```
+
+![img_33.png](/images/introduccion_docker/img_33.png)
+
+Como vemos ha descargado la imagen de dockerhub. Veamos si podemos ver las plantillas que añadimos al contenedor:
+
+![img_34.png](/images/introduccion_docker/img_34.png)
+
+Con esto podemos dar por acabado el ejercicio.
