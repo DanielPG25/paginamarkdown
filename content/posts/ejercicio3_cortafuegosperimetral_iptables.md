@@ -26,8 +26,8 @@ iptables -t nat -A POSTROUTING -s 10.1.0.0/24 -o eth0 -j MASQUERADE
 Ahora añadimos las reglas que permitan conectarnos por ssh a la máquina, para que no nos eche de la misma cuando añadamos la política por defecto:
 
 ```
-iptables -A INPUT -s 10.1.0.0/24 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A OUTPUT -d 10.1.0.0/24 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+iptables -A INPUT -s 10.0.3.0/24 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -d 10.0.3.0/24 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 ```
 
 Ya podemos añadir la política por defecto:
