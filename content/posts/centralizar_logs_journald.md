@@ -104,9 +104,6 @@ PrivateTmp=yes
 PrivateDevices=yes
 PrivateNetwork=yes
 WatchdogSec=3min
-# If there are many split up journal files we need a lot of fds to access them
-# all in parallel.
-LimitNOFILE=524288
 
 [Install]
 Also=systemd-journal-remote.socket
