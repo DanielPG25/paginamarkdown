@@ -197,6 +197,10 @@ iptables -A INPUT -p tcp --syn -j syn_flood
 iptables -A syn_flood -m limit --limit 1/s --limit-burst 3 -j RETURN
 iptables -A syn_flood -j DROP
 
+### Evita que realicen escaneos de tipo NULL a Zeus
+iptables -A INPUT -p tcp --tcp-flags ALL NONE -m limit --limit 3/m --limit-burst 5 -j LOG --log-prefix "Firewall> Null scan "
+iptables -A INPUT -p tcp --tcp-flags ALL NONE  -m recent --name blacklist_60 --set -m comment --comment "Drop/Blacklist Null scan" -j DROP
+
 ### Permitimos al servidor DNS de Apolo hacer peticiones DNS a otros servidores
 iptables -A OUTPUT -p tcp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --sport 53 -m state --state ESTABLISHED -j ACCEPT
