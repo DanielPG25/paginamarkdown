@@ -48,7 +48,7 @@ docker network create red_bookmedik
 docker run -d --name bd_mariadb -v bookmedik_vol:/var/lib/mysql --network red_bookmedik -e MARIADB_ROOT_PASSWORD=root -e MARIADB_DATABASE=bookmedik -e MARIADB_USER=bookmedik -e MARIADB_PASSWORD=bookmedik mariadb
 ```
 
-Estto será para realizar las pruebas necesarias y comprobar que la imagen de la aplicación funcione como es debido.
+Esto será para realizar las pruebas necesarias y comprobar que la imagen de la aplicación funcione como es debido.
 
 ## Tarea 1: Creación de una imagen docker con una aplicación web desde una imagen base
 
