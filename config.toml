@@ -19,8 +19,7 @@ keywords = "blog,developer,personal,"
 info = ["In-training Sysadmin"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
-footerContent = "El camino a la locura de un sysadmin \r
-                 Para más información vean el blog de [Lara](https://sysraider.es)"
+footerContent = "Para más entradas interesantes vean el blog de [Lara](https://sysraider.es)"
 dateFormat = "January 2, 2006"
 hideFooter = false
 hideCredits = false
