@@ -1269,3 +1269,151 @@ Y entramos en la url para ver si los mensajes se han guardado:
 ![img_56.png](/images/ejercicios_kubernetes/img_56.png)
 
 Como vemos, se han guardado los mensajes, por lo que podemos dar por concluido el ejercicio.
+
+## Instalación de aplicaciones en Kubernetes con Helm
+
+### Instalación de un CMS con Helm
+
+Vamos a instalar el CMS Wordpress usando Helm. Para ello, realiza los siguientes pasos:
+
+1. Instala la última versión de Helm.
+2. Añade el repositorio de bitnami
+3. Busca el chart de bitnami para la instalación de Wordpress.
+4. Busca la documentación del chart y comprueba los parámetros para cambiar el tipo de Service y el nombre del blog.
+5. Instala el chart definiendo el tipo del Service como NodePort y poniendo tu nombre como nombre del blog.
+6. Comprueba los Pods, ReplicaSet, Deployment y Services que se han creado.
+7. Accede a la aplicación.
+
+---------------------------------------------------
+
+Así pues, tal y como nos indican, vamos a instalar la última versión de Helm:
+
+```
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+sudo apt-get install apt-transport-https --yes
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+```
+
+Podemos comprobar la versión de helm que ha instalado:
+
+```
+helm version
+
+version.BuildInfo{Version:"v3.8.0", GitCommit:"d14138609b01886f544b2025f5000351c9eb092e", GitTreeState:"clean", GoVersion:"go1.17.5"}
+```
+
+A continuación instalamos el repositorio de bitnami:
+
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+"bitnami" has been added to your repositories
+```
+
+Y comprobamos que se ha instalado correctamente:
+
+```
+helm repo list
+
+NAME    URL                               
+bitnami https://charts.bitnami.com/bitnami
+```
+
+Actualizamos los repositorios:
+
+```
+helm repo update
+
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "bitnami" chart repository
+Update Complete. ⎈Happy Helming!⎈
+```
+
+Ahora buscaremos el chart de bitnami para Wordpress:
+
+```
+helm search repo wordpress
+
+NAME                    CHART VERSION APP VERSION DESCRIPTION                                       
+bitnami/wordpress       13.0.22       5.9.1       WordPress is the world's most popular blogging ...
+bitnami/wordpress-intel 0.1.13        5.9.1       WordPress for Intel is the most popular bloggin...
+```
+
+Instalamos wordpress usando los parámetros que nos han indicado:
+
+```
+helm install serverweb bitnami/wordpress --set service.type=NodePort --set wordpressBlogName=Dparrales
+
+NAME: serverweb
+LAST DEPLOYED: Mon Mar  7 09:47:42 2022
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+CHART NAME: wordpress
+CHART VERSION: 13.0.22
+APP VERSION: 5.9.1
+
+** Please be patient while the chart is being deployed **
+
+Your WordPress site can be accessed through the following DNS name from within your cluster:
+
+    serverweb-wordpress.default.svc.cluster.local (port 80)
+
+To access your WordPress site from outside the cluster follow the steps below:
+
+1. Get the WordPress URL by running these commands:
+
+   export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services serverweb-wordpress)
+   export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+   echo "WordPress URL: http://$NODE_IP:$NODE_PORT/"
+   echo "WordPress Admin URL: http://$NODE_IP:$NODE_PORT/admin"
+
+2. Open a browser and access WordPress using the obtained URL.
+
+3. Login with the following credentials below to see your blog:
+
+  echo Username: user
+  echo Password: $(kubectl get secret --namespace default serverweb-wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+```
+
+Comprobamos los servicios que se han creado:
+
+```
+kubectl get all
+
+NAME                                      READY   STATUS    RESTARTS   AGE
+pod/serverweb-mariadb-0                   1/1     Running   0          78s
+pod/serverweb-wordpress-f4c6d594b-x552h   1/1     Running   0          78s
+
+NAME                          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+service/kubernetes            ClusterIP   10.96.0.1        <none>        443/TCP                      38d
+service/serverweb-mariadb     ClusterIP   10.104.148.170   <none>        3306/TCP                     78s
+service/serverweb-wordpress   NodePort    10.101.173.60    <none>        80:30788/TCP,443:31936/TCP   78s
+
+NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/serverweb-wordpress   1/1     1            1           78s
+
+NAME                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/serverweb-wordpress-f4c6d594b   1         1         1       78s
+
+NAME                                 READY   AGE
+statefulset.apps/serverweb-mariadb   1/1     78s
+```
+
+Comprobamos la url de la aplicación ejecutando el comando que nos ha dado:
+
+```
+export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services serverweb-wordpress)
+export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+echo "WordPress URL: http://$NODE_IP:$NODE_PORT/"
+
+WordPress URL: http://192.168.39.80:30788/
+```
+
+Y accedemos al la url:
+
+![img_57.png](/images/ejercicios_kubernetes/img_57.png)
