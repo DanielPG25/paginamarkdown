@@ -327,6 +327,7 @@ FileSet {
    File = /etc
    File = /var
    File = /usr/share
+   File = /usr/local/nagios
  }
  Exclude {
     File = /var/lib/bacula
@@ -353,7 +354,8 @@ FileSet {
    File = /etc
    File = /var
    File = /usr/share
- }
+   File = /usr/local/nagios 
+}
  Exclude {
    File = /var/lib/bacula
    File = /nonexistant/path/to/file/archive/dir
@@ -382,6 +384,7 @@ FileSet {
    File = /var
    File = /opt
    File = /usr/share
+   File = /usr/local/nagios
  }
  Exclude {
    File = /nonexistant/path/to/file/archive/dir
@@ -410,6 +413,7 @@ FileSet {
    File = /var
    File = /opt
    File = /usr/share
+   File = /usr/local/nagios
  }
  Exclude {
    File = /var/lib/bacula
@@ -437,6 +441,8 @@ FileSet {
    File = /etc
    File = /var
    File = /usr/share
+   File = /usr/local/nagios
+   File = /run/nagios.lock
  }
  Exclude {
    File = /var/lib/bacula
